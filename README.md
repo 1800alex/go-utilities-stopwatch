@@ -12,3 +12,30 @@ Package stopwatch is a package that makes it simple to measure elapsed times.
 
 
 
+
+# Examples
+
+Stopwatch
+Code:
+
+```
+{
+	sw := NewStopwatch()
+	sw.Start()
+	time.Sleep(250 * time.Millisecond)
+	fmt.Printf("Stopwatch Duration: %v\n", sw.Duration())
+	sw.Stop()
+	time.Sleep(250 * time.Millisecond)
+	fmt.Printf("Stopwatch Duration: %v\n", sw.Duration())
+	sw.Start()
+	time.Sleep(250 * time.Millisecond)
+	fmt.Printf("Stopwatch Duration: %v\n", sw.Duration())
+	sw.Reset()
+	sw.Start()
+	time.Sleep(250 * time.Millisecond)
+	fmt.Printf("Stopwatch Duration: %v\n", sw.Duration())
+}
+```
+
+
+
